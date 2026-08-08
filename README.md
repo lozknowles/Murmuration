@@ -4,7 +4,7 @@
 
 An interactive browser simulation of 10–10,000 starlings by Lawrence Knowles.
 
-Move a mouse, finger, or stylus across the sky to control a bird of prey. The flock responds through seven-neighbour awareness, a 100 ms baseline reaction, smooth turn limits, variable speed, banking, and locally propagated fear. Every bird also moves forward and backward through simulated depth, changing its apparent size, opacity and drawing layer. **Ground view** places a stationary observer beneath an expansive half-mile volume of sky. At `1×`, individuals cruise between 10 and 14 m/s around a 12 m/s reference and can reach 22 m/s during escape or formation pressure; the **Speed** slider accelerates the complete simulation up to `5×`. The opening scene defaults to 2,500 birds at `4×`, while the count control permits up to 10,000 on capable hardware.
+Move a mouse, finger, or stylus across the sky to control a bird of prey. The flock responds through seven-neighbour awareness, a 100 ms baseline reaction, smooth turn limits, variable speed, banking, and locally propagated fear. Every bird also moves forward and backward through simulated depth, changing its apparent size, opacity and drawing layer. **Ground view** places a stationary observer beneath an expansive half-mile volume of sky. A checked-by-default **Auto track** toggle smoothly follows the densest three-dimensional part of the murmuration; manual drag, swipe, and arrow-key looks take temporary priority, or Auto track can be disabled for a fully manual view. At `1×`, individuals cruise between 10 and 14 m/s around a 12 m/s reference and can reach 22 m/s during escape or formation pressure; the **Speed** slider accelerates the complete simulation up to `5×`. The opening scene defaults to 2,500 birds at `4×`, while the count control permits up to 10,000 on capable hardware.
 
 ## Features
 
@@ -16,7 +16,8 @@ Move a mouse, finger, or stylus across the sky to control a bird of prey. The fl
 - Simulated forward/back flight with perspective scaling, atmospheric fading, and depth-aware flock interaction
 - Optional ground-observer view beneath a deep half-mile airspace with full 3D flock forces and perspective projection
 - Smoothed drag, swipe, and arrow-key head controls for looking left, right, up, and down
-- Overhead viewpoint graphic showing the flock, its centre, the observer's viewing cone, and head tilt
+- Optional automatic head tracking of the densest 3D flock neighbourhood
+- Overhead viewpoint graphic showing the flock, dense core, viewing cone, and head tilt
 - Occasional dense, accelerating ribbon and vortex formations
 - Seamless screen wrapping or an optional soft bounding box
 - Toggleable blue-grey haze and drifting wispy clouds
