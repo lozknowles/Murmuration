@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#aeb8bb" />
+    <meta name="description" content="Guide a bird of prey through an interactive murmuration of up to 10,000 starlings." />
+    <title>Murmuration — Lawrence Knowles</title>
+    <link rel="stylesheet" href="./assets/murmuration.css" />
+  </head>
+  <body>
+    <main class="game-shell" id="game-shell">
+      <div class="celestial-layer" aria-hidden="true">
+        <i class="rising-moon" id="rising-moon"></i>
+      </div>
+      <div class="cloud-layer" id="cloud-layer" aria-hidden="true">
+        <i class="cloud cloud-one"></i>
+        <i class="cloud cloud-two"></i>
+        <i class="cloud cloud-three"></i>
+        <i class="cloud cloud-four"></i>
+        <i class="cloud cloud-five"></i>
+        <i class="cloud cloud-six"></i>
+      </div>
+      <canvas id="murmuration" class="sky" tabindex="0" aria-label="An interactive flock of up to 10,000 starlings. Move your pointer to steer a bird of prey, or use Ground view to stand beneath the flock and look around."></canvas>
+
+      <div class="immersive-hud" id="immersive-hud" aria-hidden="true">
+        <div class="view-status">
+          <span>Ground observer · double-depth flock · 12 m/s at 1×</span>
+          <b>Drag, swipe, or use arrow keys to move your head</b>
+        </div>
+        <figure class="viewpoint-panel">
+          <canvas id="viewpoint-map" width="148" height="148" aria-label="Overhead map of the flock and current viewing direction"></canvas>
+          <figcaption>Flock · viewing cone + head tilt</figcaption>
+        </figure>
+      </div>
+
+      <header class="title-card">
+        <a class="home-link" href="https://www.lozknowles.com/" aria-label="Visit Lawrence Knowles home">LK<span>•</span></a>
+        <div class="eyebrow"><i></i> An interactive murmuration</div>
+        <h1>Murmuration</h1>
+        <p id="mode-introduction">Move the bird of prey. Watch the flock think as one.</p>
+      </header>
+
+      <div class="invitation" id="invitation" aria-hidden="true">
+        <div class="pointer-mark"></div>
+        <span id="invitation-text">Move here to enter the flock</span>
+      </div>
+
+      <aside class="controls" aria-label="Game controls">
+        <label class="flock-count" for="bird-count">
+          <span>Starlings</span>
+          <input id="bird-count" type="number" min="10" max="10000" step="10" value="2500" inputmode="numeric" title="Choose between 10 and 10,000 starlings" />
+        </label>
+        <label class="flight-speed" for="flight-speed">
+          <span>Speed</span>
+          <input id="flight-speed" type="range" min="1" max="5" step="1" value="4" aria-describedby="speed-output" title="1× is calibrated to a starling's 12 m/s murmuration speed" />
+          <output id="speed-output" for="flight-speed">4×</output>
+        </label>
+        <label class="edge-toggle" for="avoid-edges">
+          <input id="avoid-edges" type="checkbox" />
+          <span>Avoid edges</span>
+        </label>
+        <label class="cloud-toggle" for="show-clouds">
+          <input id="show-clouds" type="checkbox" checked />
+          <span>Clouds</span>
+        </label>
+        <label class="dusk-toggle" for="dusk-sky">
+          <input id="dusk-sky" type="checkbox" checked />
+          <span>Dusk sky</span>
+        </label>
+        <label class="view-toggle" for="inside-flock">
+          <input id="inside-flock" type="checkbox" checked />
+          <span>Ground view</span>
+        </label>
+        <button type="button" id="pause">Pause</button>
+        <button type="button" id="gather">Gather flock</button>
+      </aside>
+
+      <footer id="edge-description">There are no edges here <span>·</span> every horizon leads back to the sky</footer>
+    </main>
+    <script src="./assets/murmuration.js"></script>
+  </body>
+</html>
